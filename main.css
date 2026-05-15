@@ -1,0 +1,237 @@
+/* =========================================
+   1. RESET E CONFIGURAÇÕES GERAIS
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #000; /* Fundo preto caso a animação demore a carregar */
+    color: #fff;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* =========================================
+   2. FUNDO MATRIX (ESTRUTURA FIXA)
+   ========================================= */
+.background-container {
+    position: fixed; /* Fixa na tela toda */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -10; /* Garante que fique atrás de TUDO */
+    background-color: #000;
+    overflow: hidden;
+}
+
+.matrix-bg {
+    width: 100%;
+    height: 100%;
+    border: none;
+    pointer-events: none; /* Deixa você clicar nos botões */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 100%);
+    z-index: -5;
+}
+
+/* =========================================
+   3. CABEÇALHO E NAVEGAÇÃO
+   ========================================= */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: rgba(0, 0, 0, 0.9);
+    border-bottom: 2px solid #00ff41;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-texto {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.logo-texto span {
+    color: #00ff41; /* Verde Matrix */
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.menu a:hover {
+    color: #00ff41;
+}
+
+.btn-destaque {
+    border: 1px solid #00ff41;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.btn-destaque:hover {
+    background-color: #00ff41;
+    color: #000 !important;
+}
+
+/* =========================================
+   4. CONTEÚDO PRINCIPAL (HOME E LOGIN)
+   ========================================= */
+.apresentacao {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 8%;
+}
+
+.conteudo {
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 50px 40px;
+    border-radius: 25px;
+    backdrop-filter: blur(10px); /* Efeito de vidro fosco */
+    border: 1px solid rgba(0, 255, 65, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.titulo-principal {
+    font-size: 42px;
+    color: #00ff41;
+    margin-bottom: 20px;
+}
+
+.subtitulo {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    color: #e0e0e0;
+}
+
+/* =========================================
+   5. BOTÕES E FORMULÁRIOS
+   ========================================= */
+.acoes {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn-primary {
+    background: #00ff41;
+    color: #000;
+    text-decoration: none;
+    padding: 16px 35px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+    border: none;
+}
+
+.btn-primary:hover {
+    box-shadow: 0 0 25px #00ff41;
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    border: 2px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    padding: 16px 35px;
+    border-radius: 50px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.btn-secondary:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* Estilos de input para as páginas de login/cadastro */
+input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid #00ff41;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+}
+
+/* =========================================
+   6. RESPONSIVIDADE
+   ========================================= */
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .titulo-principal {
+        font-size: 32px;
+    }
+
+    .acoes {
+        flex-direction: column;
+    }
+    
+    .menu ul {
+        gap: 15px;
+        font-size: 14px;
+    }
+    /* Isso centraliza o conteúdo do login perfeitamente sobre o fundo */
+.apresentacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.conteudo {
+    background: rgba(0, 0, 0, 0.8); /* Fundo bem escuro para ler melhor */
+    padding: 40px;
+    border-radius: 20px;
+    border: 2px solid #00ff41;
+    max-width: 450px;
+    width: 100%;
+}
+}

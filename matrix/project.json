@@ -1,0 +1,556 @@
+{
+	"approved" : true,
+	"contentrating" : "Everyone",
+	"description" : "A customizable matrix wallpaper.\r\nGlyphmap, Colors, Banner, Animation, post processing, you decide how it looks!\r\n\r\nFor those encountering issues, please create a discussion so that i can answer you and ask questions on how the issue appears.",
+	"file" : "index.html",
+	"general" : 
+	{
+		"properties" : 
+		{
+			"animDirection" : 
+			{
+				"index" : 19,
+				"order" : 119,
+				"text" : "<h4><br>Direction<br><small>Direction in which the rain moves",
+				"type" : "text"
+			},
+			"animation" : 
+			{
+				"index" : 5,
+				"order" : 105,
+				"text" : "<h3>Animation",
+				"type" : "text"
+			},
+			"backAndForeground" : 
+			{
+				"index" : 46,
+				"order" : 146,
+				"text" : "<h3>Back- and Foreground",
+				"type" : "text"
+			},
+			"background" : 
+			{
+				"index" : 47,
+				"order" : 147,
+				"text" : "Background",
+				"type" : "file",
+				"value" : ""
+			},
+			"blur" : 
+			{
+				"index" : 29,
+				"max" : 1,
+				"min" : 0,
+				"order" : 129,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "<h3>Blur",
+				"type" : "slider",
+				"value" : 0.15
+			},
+			"brightnessBanner" : 
+			{
+				"condition" : "useBanner.value == 1",
+				"index" : 28,
+				"max" : 5,
+				"min" : 0,
+				"order" : 128,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "Banner Brightness",
+				"type" : "slider",
+				"value" : 1.2
+			},
+			"brightnessMax" : 
+			{
+				"condition" : "useBanner.value == 1",
+				"index" : 27,
+				"max" : 5,
+				"min" : 0,
+				"order" : 127,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "Fade Brightness",
+				"type" : "slider",
+				"value" : 1.6
+			},
+			"brightnessMin" : 
+			{
+				"index" : 23,
+				"max" : 5,
+				"min" : 0,
+				"order" : 123,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "Brightness",
+				"type" : "slider",
+				"value" : 0.3
+			},
+			"chromaticAberationRotation" : 
+			{
+				"condition" : "chromaticAberationShift.value > 0",
+				"index" : 31,
+				"max" : 360,
+				"min" : 0,
+				"order" : 131,
+				"text" : "Rotation",
+				"type" : "slider",
+				"value" : 0
+			},
+			"chromaticAberationShift" : 
+			{
+				"index" : 30,
+				"max" : 100,
+				"min" : 0,
+				"order" : 130,
+				"text" : "<h3>Chromatic Aberation<br><h4><small>Shift in pixels",
+				"type" : "slider",
+				"value" : 3
+			},
+			"coloring" : 
+			{
+				"index" : 21,
+				"order" : 121,
+				"text" : "<h3>Coloring<br><h4><small>Colors are picked using a gradient texture. <br>A gradient is optimally 256x1 pixels and goes from left to right.",
+				"type" : "text"
+			},
+			"customBanner" : 
+			{
+				"condition" : "useBanner.value == 1",
+				"index" : 25,
+				"order" : 125,
+				"text" : "Custom Banner texture",
+				"type" : "file",
+				"value" : ""
+			},
+			"customGradient" : 
+			{
+				"index" : 22,
+				"order" : 122,
+				"text" : "Custom Gradient",
+				"type" : "file",
+				"value" : ""
+			},
+			"detailBloom" : 
+			{
+				"index" : 36,
+				"order" : 136,
+				"text" : "<h3>Detail Bloom",
+				"type" : "bool",
+				"value" : true
+			},
+			"detailBloomIntensity" : 
+			{
+				"condition" : "detailBloom.value == 1",
+				"index" : 38,
+				"max" : 6,
+				"min" : 0,
+				"order" : 138,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "Intensity",
+				"type" : "slider",
+				"value" : 1
+			},
+			"detailBloomRadius" : 
+			{
+				"condition" : "detailBloom.value == 1",
+				"index" : 37,
+				"max" : 2,
+				"min" : 0,
+				"order" : 137,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "Radius",
+				"type" : "slider",
+				"value" : 1
+			},
+			"detailBloomThreshold" : 
+			{
+				"condition" : "detailBloom.value == 1",
+				"index" : 39,
+				"max" : 1,
+				"min" : 0,
+				"order" : 139,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "Threshold",
+				"type" : "slider",
+				"value" : 0.3
+			},
+			"direction" : 
+			{
+				"index" : 20,
+				"options" : 
+				[
+					{
+						"label" : "Down",
+						"value" : "down"
+					},
+					{
+						"label" : "Up",
+						"value" : "up"
+					},
+					{
+						"label" : "Mix down and up",
+						"value" : "downup"
+					},
+					{
+						"label" : "Right",
+						"value" : "right"
+					},
+					{
+						"label" : "Left",
+						"value" : "left"
+					},
+					{
+						"label" : "Mix right and left",
+						"value" : "rightleft"
+					}
+				],
+				"order" : 120,
+				"text" : "Direction",
+				"type" : "combo",
+				"value" : "down"
+			},
+			"fadeLength" : 
+			{
+				"condition" : "useBanner.value == 1",
+				"index" : 26,
+				"max" : 2048,
+				"min" : 0,
+				"order" : 126,
+				"text" : "Fade Length (in Pixels)",
+				"type" : "slider",
+				"value" : 300
+			},
+			"foreground" : 
+			{
+				"index" : 48,
+				"order" : 148,
+				"text" : "Foreground",
+				"type" : "file",
+				"value" : ""
+			},
+			"glyphChangeRate" : 
+			{
+				"index" : 7,
+				"order" : 107,
+				"text" : "<h4>Glyph change rate <br><small>How often to swap a glyph per second <br>Capped at 10 times a second",
+				"type" : "text"
+			},
+			"glyphChangeRateRandom" : 
+			{
+				"index" : 9,
+				"max" : 10,
+				"min" : 0,
+				"order" : 109,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "Randomizer",
+				"type" : "slider",
+				"value" : 0.1
+			},
+			"glyphChangeRateValue" : 
+			{
+				"index" : 8,
+				"max" : 10,
+				"min" : 0,
+				"order" : 108,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "Value",
+				"type" : "slider",
+				"value" : 0.9
+			},
+			"glyphColRowCount" : 
+			{
+				"condition" : "glyphMap.value != \"\"",
+				"index" : 3,
+				"max" : 32,
+				"min" : 1,
+				"order" : 103,
+				"text" : "rows / columns",
+				"type" : "slider",
+				"value" : 12
+			},
+			"glyphCount" : 
+			{
+				"condition" : "glyphMap.value != \"\"",
+				"index" : 4,
+				"max" : 1024,
+				"min" : 1,
+				"order" : 104,
+				"text" : "Glyph count",
+				"type" : "slider",
+				"value" : 135
+			},
+			"glyphMap" : 
+			{
+				"index" : 2,
+				"order" : 102,
+				"text" : "Custom Glyphmap texture",
+				"type" : "file",
+				"value" : ""
+			},
+			"glyphRenderDimension" : 
+			{
+				"index" : 1,
+				"max" : 32,
+				"min" : 1,
+				"order" : 101,
+				"text" : "Onscreen size",
+				"type" : "slider",
+				"value" : 12
+			},
+			"glyphs" : 
+			{
+				"index" : 0,
+				"order" : 100,
+				"text" : "<h3>Glyph Settings<br><h4><small>Glyphs are the symbols that are being rendered. They are read from a sqare, grayscale texture where the glyphs are placed in a checkerboard pattern with the same amount of rows and columns",
+				"type" : "text"
+			},
+			"hdrBloom" : 
+			{
+				"index" : 40,
+				"order" : 140,
+				"text" : "<h3>HDR Bloom",
+				"type" : "bool",
+				"value" : true
+			},
+			"hdrBloomIntensity" : 
+			{
+				"condition" : "hdrBloom.value == 1",
+				"index" : 42,
+				"max" : 10,
+				"min" : 0,
+				"order" : 142,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "Intensity",
+				"type" : "slider",
+				"value" : 1.6
+			},
+			"hdrBloomIterations" : 
+			{
+				"condition" : "hdrBloom.value == 1",
+				"index" : 41,
+				"max" : 8,
+				"min" : 2,
+				"order" : 141,
+				"text" : "Iterations",
+				"type" : "slider",
+				"value" : 4
+			},
+			"hdrBloomScatter" : 
+			{
+				"condition" : "hdrBloom.value == 1",
+				"index" : 43,
+				"max" : 2,
+				"min" : 0,
+				"order" : 143,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "Scatter",
+				"type" : "slider",
+				"value" : 0.6
+			},
+			"hdrBloomSoftThreshold" : 
+			{
+				"condition" : "hdrBloom.value == 1",
+				"index" : 45,
+				"max" : 1,
+				"min" : 0,
+				"order" : 145,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "Soft Threshold",
+				"type" : "slider",
+				"value" : 0.5
+			},
+			"hdrBloomThreshold" : 
+			{
+				"condition" : "hdrBloom.value == 1",
+				"index" : 44,
+				"max" : 1,
+				"min" : 0,
+				"order" : 144,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "Threshold",
+				"type" : "slider",
+				"value" : 0.1
+			},
+			"noise" : 
+			{
+				"index" : 32,
+				"order" : 132,
+				"text" : "<h3>Film Grain",
+				"type" : "bool",
+				"value" : true
+			},
+			"noiseExponent" : 
+			{
+				"condition" : "noise.value == 1",
+				"index" : 35,
+				"max" : 5,
+				"min" : 0.001,
+				"order" : 135,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "Exponent",
+				"type" : "slider",
+				"value" : 0.5
+			},
+			"noiseScale" : 
+			{
+				"condition" : "noise.value == 1",
+				"index" : 33,
+				"max" : 20,
+				"min" : 0,
+				"order" : 133,
+				"precision" : 2,
+				"step" : 0.1,
+				"text" : "Scale",
+				"type" : "slider",
+				"value" : 10
+			},
+			"noiseStrength" : 
+			{
+				"condition" : "noise.value == 1",
+				"index" : 34,
+				"max" : 5,
+				"min" : 0,
+				"order" : 134,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "Strength",
+				"type" : "slider",
+				"value" : 2
+			},
+			"rainLength" : 
+			{
+				"index" : 10,
+				"order" : 110,
+				"text" : "<h4><br>Rain Length <br><small>Depicts Length in screen height <br> Capped at 3 times the screen height",
+				"type" : "text"
+			},
+			"rainLengthRandom" : 
+			{
+				"index" : 12,
+				"max" : 3,
+				"min" : 0,
+				"order" : 112,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "Randomizer",
+				"type" : "slider",
+				"value" : 0.5
+			},
+			"rainLengthValue" : 
+			{
+				"index" : 11,
+				"max" : 3,
+				"min" : 0.01,
+				"order" : 111,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "Value",
+				"type" : "slider",
+				"value" : 0.3
+			},
+			"rainSpacing" : 
+			{
+				"index" : 13,
+				"order" : 113,
+				"text" : "<h4><br>Rain Spacing <br><small>Empty Padding to the start of the drop",
+				"type" : "text"
+			},
+			"rainSpacingRandom" : 
+			{
+				"index" : 15,
+				"max" : 1,
+				"min" : 0,
+				"order" : 115,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "Randomizer",
+				"type" : "slider",
+				"value" : 0.2
+			},
+			"rainSpacingValue" : 
+			{
+				"index" : 14,
+				"max" : 1,
+				"min" : 0,
+				"order" : 114,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "Value",
+				"type" : "slider",
+				"value" : 0.35
+			},
+			"rainSpeed" : 
+			{
+				"index" : 16,
+				"order" : 116,
+				"text" : "<h4><br>Rain Speed <br><small>Seconds for a drop to reach the bottom of the screen <br> Capped at 10 seconds",
+				"type" : "text"
+			},
+			"rainSpeedRandom" : 
+			{
+				"index" : 18,
+				"max" : 10,
+				"min" : 0,
+				"order" : 118,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "Randomizer",
+				"type" : "slider",
+				"value" : 1.5
+			},
+			"rainSpeedValue" : 
+			{
+				"index" : 17,
+				"max" : 10,
+				"min" : 0.01,
+				"order" : 117,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "Value",
+				"type" : "slider",
+				"value" : 3
+			},
+			"randomizerInfo" : 
+			{
+				"index" : 6,
+				"order" : 106,
+				"text" : "<h4><small>Info: Randomizers depict a random value in the range from 0 to their value, which gets added on top of the regular value",
+				"type" : "text"
+			},
+			"schemecolor" : 
+			{
+				"order" : 0,
+				"text" : "ui_browse_properties_scheme_color",
+				"type" : "color",
+				"value" : "0.023529411764705882 1 0.23529411764705882"
+			},
+			"useBanner" : 
+			{
+				"index" : 24,
+				"order" : 124,
+				"text" : "<h4><br>Use Banner<br><small>A centered grayscale graphic, used for lighting up glyphs.<br>Gets gets fitted to the height of the screen.<br>Rain passing through it will keep glowing for as long as specified (Fade)",
+				"type" : "bool",
+				"value" : true
+			}
+		}
+	},
+	"preview" : "preview.gif",
+	"tags" : [ "Sci-Fi" ],
+	"title" : "Customizable Matrix",
+	"type" : "Web",
+	"version" : 11,
+	"visibility" : "public",
+	"workshopid" : "2793094827",
+	"workshopurl" : "steam://url/CommunityFilePage/2793094827"
+}
