@@ -2,51 +2,25 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | Seniors Connected</title>
-    <link rel="stylesheet" href="/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../main.css">
 </head>
 <body>
 
     <div class="background-container">
-        <iframe src="/matrix/index.html" frameborder="0" class="matrix-bg"></iframe>
+        <iframe src="../matrix/index.html" frameborder="0" class="matrix-bg"></iframe>
         <div class="overlay"></div>
     </div>
 
-    <header class="cabecalho">
-        <div class="logo-container">
-            <h1 class="logo-texto">Seniors<span>Connected</span></h1>
-        </div>
-        <nav class="menu">
-            <ul>
-                <li><a href="/sections/login.html">Início</a></li>
-                <li><a href="/sections/cadastro.html" class="btn-destaque">Cadastrar</a></li>
-            </ul>
-        </nav>
-    </header>
-
     <main class="apresentacao">
         <div class="conteudo">
-            <h2 class="titulo-principal" style="font-size: 32px;">Entrar</h2>
-            
-            <form action="#" style="margin-top: 20px;">
-                <div style="text-align: left; margin-bottom: 15px;">
-                    <label style="color: #00ff41; display: block; margin-bottom: 5px;">E-mail</label>
-                    <input type="email" placeholder="exemplo@email.com" required 
-                           style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #00ff41; background: rgba(0,0,0,0.6); color: white;">
-                </div>
-
-                <div style="text-align: left; margin-bottom: 20px;">
-                    <label style="color: #00ff41; display: block; margin-bottom: 5px;">Senha</label>
-                    <input type="password" placeholder="Sua senha" required 
-                           style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #00ff41; background: rgba(0,0,0,0.6); color: white;">
-                </div>
-
-                <button type="submit" class="btn-primary" style="width: 100%; border: none; cursor: pointer;">Entrar</button>
+            <h2 class="titulo-principal">Entrar</h2>
+            <form>
+                <input type="email" placeholder="E-mail">
+                <input type="password" placeholder="Senha">
+                <button type="submit" class="btn-primary">Entrar</button>
             </form>
-
-            <p style="margin-top: 20px;">Esqueceu a senha? <a href="/sections/recuperarAcesso.html" style="color: #00ff41; text-decoration: none;">Clique aqui</a></p>
+            <p style="margin-top: 15px;"><a href="../index.html" style="color:#00ff41">Voltar</a></p>
         </div>
     </main>
 
